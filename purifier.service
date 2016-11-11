@@ -1,0 +1,22 @@
+[Unit]
+
+Description=uart_purifier
+
+After=network.target
+
+
+
+[Service]
+
+WorkingDirectory=/home/root/
+
+ExecStart=/usr/bin/python purifier.py
+
+Restart=always
+
+RestartSec=10s
+
+
+[Install]
+
+WantedBy=multi-user.target
